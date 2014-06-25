@@ -1,0 +1,13 @@
+a, a:focus, blockquote p:after, .share a:hover, .site-footer a:hover, ul.menu li a:hover, ul.menu li a.active { color: #e67e22; }
+
+blockquote:before, blockquote:after, ul.check-list li i, .mapswitch-inner:before, .mapswitch-switch, .subscribe:hover, .site-head, a#open-menu-item, .panel-default>.panel-heading, table th { background-color: #e67e22; }
+
+.mapswitch-switch, .subscribe:hover, .post-progress { border-color: #e67e22; }
+
+#main-menu { background:rgba(230,126,34,0.8);  }
+
+a:hover { color: #d35400; }, .author .author-email a:hover  { color: #d35400; }
+
+#toTop:hover { border-color: #d35400; background-color: #d35400; }
+
+#main-menu, #main-menu ul.menu li a, #main-menu ul.menu li:first-child a { border-color:#ec8225; }

@@ -1,0 +1,4 @@
+*** Mobile+ Ghost Theme Changelog ***
+	
+2014.03.05 - version 1.0
+ * Initial release

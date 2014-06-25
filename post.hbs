@@ -1,0 +1,114 @@
+{{!< default}}
+
+{{! This is a post template. }}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+        
+        {{#post}}
+
+        <header class="site-head post-header post-header-cover">
+
+            <a id="open-menu-item"><i class="fa fa-bars"></i></a>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="caption divider">
+                            
+                        <a class="blog-logo" href="{{@blog.url}}">
+                            {{#if @blog.logo}}
+                                <img src="{{@blog.logo}}" alt="Blog Logo" />
+                            {{else}}
+                                <span class="blog-title">{{@blog.title}}</span>
+                            {{/if}}
+                        </a>
+                            
+                        <h1 class="post-title">{{{title}}}</h1>
+                        <span class="post-meta inside"><time datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date format="MMMM DD YYYY"}}</time></span>
+                        {{#if tags}}
+                        <section class="post-tags inside">
+                        <i class="fa fa-tags"></i>{{tags separator=", "}}
+                        </section>
+                        {{/if}}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+        
+                    <section class="post-content clearfix">
+                        {{content}}
+                    </section>
+            
+                    <footer class="post-footer clearfix">
+            
+                    <section class="author">
+                    
+                        <img src="{{author.image}}"/>
+                        <div class="author-title divider">
+                        <h2>{{author.name}}</h2>
+                        </div>
+                        <div class="author-description divider">
+                        {{author.bio}}
+                        </div>
+                        <div class="author-location divider">
+                        <i class="fa fa-map-marker"></i>
+                        {{author.location}}
+                        </div>
+                        <div class="author-website divider">
+                        <i class="fa fa-link"></i>
+                        <a href="{{author.website}}">{{author.website}}</a>
+                        </div>  
+                                                                                
+                    
+                     </section>
+            
+                    </footer>
+                    
+                </div>
+                
+                <div class="col-md-2">
+                    
+                    <section id="share" class="share">
+                    
+                    <div class="post-progress">
+                    <span id="progressbar"></span><span class="post-progress-info"></>{{{title}}}</span>
+                    <span id="progressbar-value">0%</span>
+                    </div>
+                    
+                        
+                    <h4>Share this post</h4>
+                    <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span><i class="fa fa-twitter"></i></span>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span><i class="fa fa-facebook"></i></span>
+                    </a>
+                    <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <span><i class="fa fa-google-plus"></i></span>
+                    </a>
+                    </section>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        {{/post}}
+             
+        {{> widgets/disqus }}
+
+    </article>
+
+</main>

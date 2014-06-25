@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}"/>
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    {{! Define here your colored stylesheet }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/style-blue.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/local.css" />
+    
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic'/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+    
+<body class="{{body_class}}" data-target="#navigation">
+    
+    <div id="toTop"><i class="fa fa-chevron-up"></i></div>
+    
+    <aside>
+    <div id="main-menu">
+        <a id="close-menu-item"><i class="fa fa-times"></i></a>
+        <ul class="menu">
+        <li><a class="menu-item" href="{{@blog.url}}"><span class="fa fa-home"></span>Home</a></li>
+        <li><a class="menu-item" href="{{@blog.url}}/about"><span class="fa fa-info-circle"></span>About</a></li>
+        <li><a class="menu-item" href="http://mobileplus.ghost.morethanthemes.com/docs" target="_blank"><span class="fa fa-book"></span>Documentation</a></li>
+        <li><a class="menu-item" href="{{@blog.url}}/faq"><span class="fa fa-question-circle"></span>FAQ</a></li>
+        </ul>
+    </div>
+    </aside>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+    
+    <footer class="site-footer">
+        
+        <a class="subscribe" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i><span class="tooltip">Subscribe!</span></a>
+        
+        <section id="footer">
+            
+            <div class="container">
+            
+                <div class="row">
+        
+                    <div class="col-md-12">
+        
+                        <div class="footer-area clearfix">
+    
+                            <ul class="social-bookmarks">
+                                <li class="facebook">
+                                    <a href="https://www.facebook.com/appknox"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="https://twitter.com/appknox"><i class="fa fa-twitter"></i></a>
+                                </li>                      
+                                <li class="linkedin">
+                                    <a href="https://www.linkedin.com/company/xysec-labs"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li class="skype">
+                                    <a href="#"><i class="fa fa-skype"></i></a>
+                                </li>
+                            </ul>
+    
+                        </div>
+                        
+                        <div class="footer-area clearfix">
+    
+                            <div class="mapswitch-wrapper">                                
+                                <div class="mapswitch-text">Map on/off</div>
+                                <div class="mapswitch">
+                                    <input type="checkbox" name="mapswitch" class="mapswitch-checkbox" id="mapswitch">
+                                    <label class="mapswitch-label" for="mapswitch">
+                                        <span class="mapswitch-inner"></span>
+                                        <span class="mapswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            
+            </div>
+            
+        </section>
+        
+        <div class="clearfix visible-sm"></div>
+        
+        {{> widgets/googlemap }}
+        
+        <div class="clearfix visible-sm"></div>
+        
+        <section id="subfooter">
+        
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-md-12">
+                    
+                    <section class="copyright">All content copyright <a href="https://www.appknox.com">Appknox</a> &copy; {{date format="YYYY"}} &bull; All rights reserved. Owned by <a href="https://www.appknox.com">XYSec Labs</a></section>
+                    
+                    </div>
+        
+                </div>
+            </div>    
+            
+        </section>
+            
+        </div>
+        
+    </footer>    
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript files for Mobile+ }}
+    <script type="text/javascript" src="{{asset "js/bootstrap.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/enquire.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript">
+        /*** Configuration Variables ***/
+        var config = {
+            disqus_shortname:"appknox",
+            lat:"1.296769",
+            lng:"103.786914",
+            zoom:12
+        };
+    </script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+</body>
+</html>
