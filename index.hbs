@@ -1,13 +1,13 @@
 {{!< default}}
 
-<header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+<header class="site-head" {{#if @blog.cover}}style="background: url({{@blog.cover}})"{{/if}}>
     
     <a id="open-menu-item" href="#main-menu"><i class="fa fa-bars"></i></a>
     
     <div class="caption divider">
         <div class="site-head-content inner">
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
+            
             <h2 class="blog-description">{{@blog.description}}</h2>
         </div>
     </div>
@@ -30,7 +30,12 @@
                     
                     <section class="post-time">
                     <time datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date format="MMMM DD YYYY"}}</time>
-                    </section>  
+                    </section>
+                    {{#if tags}}
+                    <section class="post-tags">
+                    <i class="fa fa-tags"></i>{{tags separator=", "}}
+                    </section>
+                    {{/if}}  
         
                 </header>
                 
@@ -38,11 +43,6 @@
                     <p>{{excerpt}}&hellip;</p>
                 </section>
                 
-                {{#if tags}}
-                <section class="post-tags">
-                <i class="fa fa-tags"></i>{{tags separator=", "}}
-                </section>
-                {{/if}}
                     
             </article>
         

@@ -1,6 +1,6 @@
 a, a:focus, blockquote p:after, .share a:hover, .site-footer a:hover, ul.menu li a:hover, ul.menu li a.active { color: #e74c3c; }
 
-blockquote:before, blockquote:after, ul.check-list li i, .mapswitch-inner:before, .mapswitch-switch, .subscribe:hover, .site-head, a#open-menu-item, .panel-default>.panel-heading, table th { background-color: #e74c3c; }
+blockquote:before, blockquote:after, ul.check-list li i, .mapswitch-inner:before, .mapswitch-switch, .subscribe:hover, a#open-menu-item, .panel-default>.panel-heading, table th { background-color: #e74c3c; }
 
 .mapswitch-switch, .subscribe:hover, .post-progress { border-color: #e74c3c; }
 

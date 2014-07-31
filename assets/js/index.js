@@ -47,6 +47,8 @@
         if (cover.length > 0) {
             cover.remove();
             container.css("background-image", "url(" + cover.attr("src") + ")");
+        } else {
+            container.css("background", "url(/assets/images/mbl-pattern.png)");
         }
         
         /**

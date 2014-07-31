@@ -26,13 +26,12 @@
                         </a>
                             
                         <h1 class="post-title">{{{title}}}</h1>
-                        <span class="post-meta inside"><time datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date format="MMMM DD YYYY"}}</time></span>
                         {{#if tags}}
                         <section class="post-tags inside">
                         <i class="fa fa-tags"></i>{{tags separator=", "}}
                         </section>
                         {{/if}}
-                            
+                        <span class="post-meta inside"><time datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date format="MMMM DD YYYY"}}</time></span>
                         </div>
                     </div>
                 </div>
@@ -53,20 +52,20 @@
                     <section class="author">
                     
                         <img src="{{author.image}}"/>
-                        <div class="author-title divider">
+                        <div class="author-title ndivider">
                         <h2>{{author.name}}</h2>
                         </div>
-                        <div class="author-description divider">
+                        {{#if author.bio}}
+                        <div class="author-description ndivider">
                         {{author.bio}}
                         </div>
-                        <div class="author-location divider">
-                        <i class="fa fa-map-marker"></i>
-                        {{author.location}}
+                        {{/if}}
+                        {{#if author.website}}
+                        <div class="author-website ndivider">
+                        <i class="fa fa-link">
+                        <a href="{{author.website}}">{{author.website}}</a></i>
                         </div>
-                        <div class="author-website divider">
-                        <i class="fa fa-link"></i>
-                        <a href="{{author.website}}">{{author.website}}</a>
-                        </div>  
+                        {{/if}}
                                                                                 
                     
                      </section>
