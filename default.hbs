@@ -13,14 +13,30 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset 'favicons/apple-touch-icon-57x57.png' }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset 'favicons/apple-touch-icon-114x114.png' }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset 'favicons/apple-touch-icon-72x72.png' }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset 'favicons/apple-touch-icon-144x144.png' }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset 'favicons/apple-touch-icon-60x60.png' }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset 'favicons/apple-touch-icon-120x120.png' }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset 'favicons/apple-touch-icon-76x76.png' }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset 'favicons/apple-touch-icon-152x152.png' }}">
+    <meta name="apple-mobile-web-app-title" content="Appknox">
+    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-192x192.png' }}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-160x160.png' }}" sizes="160x160">
+    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-96x96.png' }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-16x16.png' }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-32x32.png' }}" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ asset 'favicons/mstile-144x144.png' }}">
+    <meta name="application-name" content="Appknox">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset 'css/bootstrap.css' }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset 'css/style.css' }}" />
     {{! Define here your colored stylesheet }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/style-red.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/css/local.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset 'css/style-red.css' }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset 'css/local.css' }}" />
     
     <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic'/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
@@ -38,9 +54,9 @@
         <a id="close-menu-item"><i class="fa fa-times"></i></a>
         <ul class="menu">
         <li><a class="menu-item" href="{{@blog.url}}"><span class="fa fa-home"></span>Blog Home</a></li>
-        <li><a class="menu-item" href="https://www.appknox.com/#about" target="_blank"><span class="fa fa-bolt"></span>Appknox</a></li>
-        <li><a class="menu-item" href="https://www.appknox.com/#team" target="_blank"><span class="fa fa-bars"></span>Team</a></li>
-        <li><a class="menu-item" href="http://www.xysec.com/"><span class="fa fa-info-circle"></span>XYSec Labs</a></li>
+        <li><a class="menu-item" href="https://www.appknox.com/" target="_blank"><span class="fa fa-bolt"></span>Appknox</a></li>
+        <li><a class="menu-item" href="https://www.appknox.com/features" target="_blank"><span class="fa fa-bars"></span>Features</a></li>
+        <li><a class="menu-item" href="https://www.appknox.com/contact"><span class="fa fa-info-circle"></span>Contact Us</a></li>
         </ul>
     </div>
     </aside>
@@ -71,9 +87,6 @@
                                 </li>                      
                                 <li class="linkedin">
                                     <a href="https://www.linkedin.com/company/xysec-labs"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <li class="skype">
-                                    <a href="#"><i class="fa fa-skype"></i></a>
                                 </li>
                             </ul>
     
