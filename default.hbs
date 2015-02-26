@@ -1,166 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head>
-    {{! Document Settings }}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {{! Page Meta }}
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset 'favicons/apple-touch-icon-57x57.png' }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset 'favicons/apple-touch-icon-114x114.png' }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset 'favicons/apple-touch-icon-72x72.png' }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset 'favicons/apple-touch-icon-144x144.png' }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset 'favicons/apple-touch-icon-60x60.png' }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset 'favicons/apple-touch-icon-120x120.png' }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset 'favicons/apple-touch-icon-76x76.png' }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset 'favicons/apple-touch-icon-152x152.png' }}">
-    <meta name="apple-mobile-web-app-title" content="Appknox">
-    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-192x192.png' }}" sizes="192x192">
-    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-160x160.png' }}" sizes="160x160">
-    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-96x96.png' }}" sizes="96x96">
-    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-16x16.png' }}" sizes="16x16">
-    <link rel="icon" type="image/png" href="{{ asset 'favicons/favicon-32x32.png' }}" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset 'favicons/mstile-144x144.png' }}">
-    <meta name="application-name" content="Appknox">
-
-    {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{ asset 'css/bootstrap.css' }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset 'css/style.css' }}" />
-    {{! Define here your colored stylesheet }}
-    <link rel="stylesheet" type="text/css" href="{{ asset 'css/style-red.css' }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset 'css/local.css' }}" />
-    
-    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic'/>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
-
-    {{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
-    <script src="//static.getclicky.com/js" type="text/javascript"></script>
-    <script type="text/javascript">try{ clicky.init(100776286); }catch(e){}</script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100776286ns.gif" /></p></noscript>
-</head>
-    
-<body class="{{body_class}}" data-target="#navigation">
-    
-    <div id="toTop"><i class="fa fa-chevron-up"></i></div>
-    
-    <aside>
-    <div id="main-menu">
-        <a id="close-menu-item"><i class="fa fa-times"></i></a>
-        <ul class="menu">
-        <li><a class="menu-item" href="{{@blog.url}}"><span class="fa fa-home"></span>Blog Home</a></li>
-        <li><a class="menu-item" href="https://www.appknox.com/" target="_blank"><span class="fa fa-bolt"></span>Appknox</a></li>
-        <li><a class="menu-item" href="https://www.appknox.com/features" target="_blank"><span class="fa fa-bars"></span>Features</a></li>
-        <li><a class="menu-item" href="https://www.appknox.com/contact"><span class="fa fa-info-circle"></span>Contact Us</a></li>
-        </ul>
-    </div>
-    </aside>
-
-    {{! Everything else gets inserted here }}
-    {{{body}}}
-    
-    <footer class="site-footer">
-        
-        <a class="subscribe" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i><span class="tooltip">Subscribe!</span></a>
-        
-        <section id="footer">
-            
-            <div class="container">
-            
-                <div class="row">
-        
-                    <div class="col-md-12">
-        
-                        <div class="footer-area clearfix">
-    
-                            <ul class="social-bookmarks">
-                                <li class="facebook">
-                                    <a href="https://www.facebook.com/appknox"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="https://twitter.com/appknox"><i class="fa fa-twitter"></i></a>
-                                </li>                      
-                                <li class="linkedin">
-                                    <a href="https://www.linkedin.com/company/xysec-labs"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
-    
-                        </div>
-                        
-                        <div class="footer-area clearfix">
-    
-                            <div class="mapswitch-wrapper">                                
-                                <div class="mapswitch-text">Map on/off</div>
-                                <div class="mapswitch">
-                                    <input type="checkbox" name="mapswitch" class="mapswitch-checkbox" id="mapswitch">
-                                    <label class="mapswitch-label" for="mapswitch">
-                                        <span class="mapswitch-inner"></span>
-                                        <span class="mapswitch-switch"></span>
-                                    </label>
-                                </div>
-                            </div>
-    
-                        </div>
-    
-                    </div>
-                </div>
-            
-            </div>
-            
-        </section>
-        
-        <div class="clearfix visible-sm"></div>
-        
-        {{> widgets/googlemap }}
-        
-        <div class="clearfix visible-sm"></div>
-        
-        <section id="subfooter">
-        
-            <div class="container">
-                <div class="row">
-        
-                    <div class="col-md-12">
-                    
-                    <section class="copyright">All content copyright <a href="https://www.appknox.com">Appknox</a> &copy; {{date format="YYYY"}} &bull; All rights reserved. Owned by <a href="https://www.appknox.com">XYSec Labs</a></section>
-                    
-                    </div>
-        
-                </div>
-            </div>    
-            
-        </section>
-            
+<html class="no-js">
+  {{> head}}
+  <body>
+    {{> header}}
+    <div class="main-container">
+      {{{body}}}
+      <section class="strip bg-primary">
+        <div class="container">
+          <div class="row clearfix">
+            <form class="mail-list-signup">
+              <div class="col-sm-9 col-xs-12 pull-left clear-fix">
+                <h3 class="text-white pull-left"><strong>Get Notified.&nbsp;</strong></h3>
+                <input type="text" class="signup-email-field validate-required validate-email" placeholder="Enter your email here here">
+              </div>
+              
+              <div class="col-sm-3 col-xs-12 pull-right text-right">
+                <input type="submit" class="btn btn-primary btn-filled" value="Subscribe">
+              </div>
+            </form>
+          </div>
         </div>
-        
-    </footer>    
-
-    {{! Ghost outputs important scripts and data with this tag }}
+        <iframe class="mail-list-form" srcdoc="">
+        </iframe>
+      </section>
+    </div>
+    <div class="footer-container">
+        {{> footer }}
+    </div>
     {{ghost_foot}}
-
-    {{! The main JavaScript files for Mobile+ }}
-    <script type="text/javascript" src="{{asset "js/bootstrap.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/enquire.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript">
-        /*** Configuration Variables ***/
-        var config = {
-            disqus_shortname:"appknox",
-            lat:"1.296769",
-            lng:"103.786914",
-            zoom:12
-        };
-    </script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-
-</body>
+    <script type="text/javascript" src="{{asset 'js/jquery.plugin.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/bootstrap.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/jquery.flexslider-min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/smooth-scroll.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/skrollr.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/spectragram.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/scrollReveal.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/isotope.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/twitterFetcher_v10_min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/lightbox.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/jquery.countdown.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/bootstrap.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/jquery.backstretch.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/jquery.simple-text-rotator.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/scripts.js?v3'}}"></script>
+    {{{block "addscript"}}}
+  </body>
 </html>
+

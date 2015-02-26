@@ -1,0 +1,28 @@
+<section class="blog-list-3 bg-white">
+{{#foreach posts}}
+  <div class="blog-snippet-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <h1><a href="{{url}}">{{title}}</a></h1>
+          <p class="lead">
+            {{excerpt words="100"}} ...
+          </p>
+          {{#if tags}}
+          {{tags separator=", " prefix='<i class="icon icon_tags"></i> Tags: '}}<br>
+          {{/if}}
+          <i class="icon icon_calendar"></i><span class="alt-font">Published on {{date format="DD MMMM YYYY"}}</span><br>
+          <i class="icon icon_pencil-edit"></i><span class="alt-font">Written By - {{author}}</span>
+        </div>
+      </div>
+    </div>  
+  </div>
+{{/foreach}}
+</section>
+{{#if pagination.prev}}
+  {{pagination}}
+{{else}}
+{{#if pagination.next}}
+  {{pagination}}
+{{/if}}
+{{/if}}

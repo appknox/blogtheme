@@ -1,70 +1,41 @@
 {{!< default}}
-
-<header class="site-head" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat center"{{/if}}>
-    
-    <a id="open-menu-item" href="#main-menu"><i class="fa fa-bars"></i></a>
-    
-    <div class="caption divider">
-        <div class="site-head-content inner">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            
-            <h2 class="blog-description">{{@blog.description}}</h2>
-        </div>
+<header class="page-header resume-header">
+  <div class="background-image-holder parallax-background">
+  {{#if @blog.cover}}
+    <img class="background-image" alt="Background Image" src="{{@blog.cover}}">
+  {{else}}
+    <img class="background-image" alt="Background Image" src="{{asset 'img/blog.jpg'}}">
+  {{/if}}
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-white space-bottom-medium">{{@blog.title}}</h1>
+        <span>{{@blog.description}}</span>
+      </div>
     </div>
+  </div>
 </header>
+{{> "loop"}}
 
-<main class="content" role="main">
-    
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-8 col-md-offset-2">
-        
-            {{! Each post will be output using this markup }}
-            {{#foreach posts}}
-        
-            <article id="post{{id}}"  class="{{post_class}} divider">
-                <header class="post-header">
-                    
-                    <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-                    
-                    <section class="post-time">
-                    <time datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date format="MMMM DD YYYY"}}</time>
-                    </section>
-                    {{#if tags}}
-                    <section class="post-tags">
-                    <i class="fa fa-tags"></i>{{tags separator=", "}}
-                    </section>
-                    {{/if}}  
-        
-                </header>
-                
-                <section class="post-excerpt">
-                    <p>{{excerpt}}&hellip;</p>
-                </section>
-                
-                    
-            </article>
-        
-            {{/foreach}}
-        
-            {{!! After all the posts, we have the previous/next pagination links }}
-            {{pagination}}
-                    
-            </div>
-            
-            <div class="col-md-2">
-                
-                <ul id="navigation" class="menu navigation-menu">
-                {{#foreach posts}}
-                <li><a href="{{url}}">{{title}}</a><br/><time datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i>{{date format="MMMM DD YYYY"}}</time></li>
-                {{/foreach}}
-                </ul>
-                
-                
-            </div>
-            
-        </div>
-    </div>
+{{#contentFor "meta"}}
+  <meta name="description" content="Add your description.">
 
-</main>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Gentlenode Studio | Journal"/>
+  <meta property="og:description" content="Add your description."/>
+  <meta property="og:site_name" content="Gentlenode Studio | Journal"/>
+  <meta property="og:url" content="https://gentlenode.com/"/>
+  <meta property="og:image" content="https://gentlenode.com/images/og-image.png"/>
+  <meta property="fb:admins" content="100006090000201"/>
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Gentlenode Studio | Journal"/>
+  <meta name="twitter:description" content="Add your description."/>
+  <meta name="twitter:image" content="https://gentlenode.com/images/og-image.png"/>
+  <meta name="twitter:site" content="@appknox"/>
+  <meta name="twitter:creator" content="@appknox"/>
+{{/contentFor}}
