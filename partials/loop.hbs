@@ -1,24 +1,57 @@
-<section class="blog-list-3 bg-white">
-{{#foreach posts}}
-  <div class="blog-snippet-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-          <h1><a href="{{url}}">{{title}}</a></h1>
-          <p class="lead">
-            {{excerpt words="100"}} ...
-          </p>
-          {{#if tags}}
-          {{tags separator=", " prefix='<i class="icon icon_tags"></i> Tags: '}}<br>
-          {{/if}}
-          <i class="icon icon_calendar"></i><span class="alt-font">Published on {{date format="DD MMMM YYYY"}}</span><br>
-          <i class="icon icon_pencil-edit"></i><span class="alt-font">Written By - {{author}}</span>
-        </div>
-      </div>
-    </div>  
-  </div>
-{{/foreach}}
-</section>
+<section class="blog-masonry bg-muted">
+      
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              
+            </div>
+          </div><!--end of row-->
+        </div><!--end of container-->
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="blog-container">
+          
+              {{#foreach posts}}
+              <div class="blog-snippet-3">
+                      <h1><a href="{{url}}">{{title}}</a></h1>
+                      <p class="lead">
+                        {{excerpt words="100"}} ...
+                      </p>
+                      {{#if tags}}
+                      {{tags separator=", " prefix='<i class="icon icon_tags"></i> Tags: '}}<br>
+                      {{/if}}
+                      <i class="icon icon_calendar"></i><span class="alt-font">Published on {{date format="DD MMMM YYYY"}}</span><br>
+                      <i class="icon icon_pencil-edit"></i><span class="alt-font">Written By - {{author}}</span>
+              </div>
+            {{/foreach}}
+          
+              </div><!--end of blog masonry container-->
+              
+            </div>
+            
+            <div class="col-sm-3">
+              <div class="blog-sidebar">
+                <div class="sidebar-widget">
+                  <h5>Recent Posts</h5>
+                  <ul id="posts_list">
+                  </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                  <h5>Find us in Facebook</h5>
+                  <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fappknox&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true&amp;appId=204304539680791" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
+                </div>
+                
+              </div>
+            </div>
+          </div><!--end of row-->
+        </div><!--end of container-->
+      
+    
+        
+      </section>
 {{#if pagination.prev}}
   {{pagination}}
 {{else}}
