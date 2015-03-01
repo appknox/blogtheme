@@ -1635,6 +1635,22 @@ img.phone-portrait {
   position: relative;
   top: 4px;
 }
+.sidebar-widget .subscribe-email-field:focus {
+  outline: none;
+}
+.sidebar-widget .subscribe-email-field {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  float: left;
+  color: #fff;
+  min-width: 250px;
+  font-weight: 300;
+  font-size: 15px;
+  position: relative;
+  top: 4px;
+}
 .strip .subscribe-email-field:focus {
   outline: none;
 }
