@@ -1642,17 +1642,13 @@ img.phone-portrait {
   outline: none;
 }
 .blog-sidebar .subscribe-email-field {
-  background: none;
-  border: none;
   box-shadow: none;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   float: left;
-  color: #fff;
+  color: #000;
   min-width: 250px;
   font-weight: 300;
-  font-size: 15px;
-  position: relative;
-  top: 4px;
+  font-size: 20px;
 }
 .pricing-tables .col-md-3:first-child .pricing-table {
   border-radius: 25px 0px 0px 25px;
@@ -2338,6 +2334,13 @@ input[type="submit"] {
 .strip .mail-list-subscribe input[type="submit"] {
   background: none;
   border: 2px solid #fff;
+}
+.blog-sidebar .mail-list-subscribe input[type="submit"] {
+background: #fc4349;
+color: #fff;
+border: None;
+position: relative;
+top: 10px;
 }
 .contact-center p.lead {
   font-size: 18px;
