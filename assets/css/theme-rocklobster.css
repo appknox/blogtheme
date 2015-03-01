@@ -1635,10 +1635,13 @@ img.phone-portrait {
   position: relative;
   top: 4px;
 }
-.sidebar-widget .subscribe-email-field:focus {
+.strip .subscribe-email-field:focus {
   outline: none;
 }
-.sidebar-widget .subscribe-email-field {
+.blog-sidebar .subscribe-email-field:focus {
+  outline: none;
+}
+.blog-sidebar .subscribe-email-field {
   background: none;
   border: none;
   box-shadow: none;
@@ -1650,9 +1653,6 @@ img.phone-portrait {
   font-size: 15px;
   position: relative;
   top: 4px;
-}
-.strip .subscribe-email-field:focus {
-  outline: none;
 }
 .pricing-tables .col-md-3:first-child .pricing-table {
   border-radius: 25px 0px 0px 25px;
