@@ -59,3 +59,30 @@
 
 </section>
 {{/post}}
+{{#contentFor "meta"}}
+{{#post}}
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="blog"/>
+  <meta property="og:title" content="{{title}}"/>
+  <meta property="og:description" content="{{excerpt characters="140"}}"/>
+  <meta property="og:site_name" content="Appknox - Blog"/>
+  {{#if image}}
+  <meta property="og:image" content="https://blog.appknox.com{{image}}"/>
+  {{else}}
+  <meta property="og:image" content="https://blog.appknox.com/assets/img/logo-dark.png"/>
+  {{/if}}
+  <meta property="fb:admins" content="218311445046607"/>
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="{{title}}"/>
+  <meta name="twitter:description" content="{{excerpt characters="140"}}"/>
+  {{#if image}}
+  <meta name="twitter:image" content="https://blog.appknox.com{{image}}"/>
+  {{else}}
+  <meta name="twitter:image" content="https://blog.appknox.com/assets/img/logo-dark.png"/>
+  {{/if}}
+  <meta name="twitter:site" content="@appknox"/>
+  <meta name="twitter:creator" content="@appknox"/>
+{{/post}}
+{{/contentFor}}
