@@ -2339,6 +2339,7 @@ input[type="submit"] {
 background: #fc4349;
 color: #fff;
 border: None;
+min-width: 250px;
 position: relative;
 top: 10px;
 }

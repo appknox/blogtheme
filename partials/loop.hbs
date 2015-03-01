@@ -16,6 +16,9 @@
               {{#foreach posts}}
               <div class="blog-snippet-3">
                       <h1><a href="{{url}}">{{title}}</a></h1>
+                      {{#if image}}
+                      <img src="{{image}}" class="pull-left post-image-excerpt">
+                      {{/if}}
                       <p class="lead">
                         {{excerpt words="100"}} ...
                       </p>
