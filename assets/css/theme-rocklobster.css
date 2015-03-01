@@ -1619,7 +1619,7 @@ img.phone-portrait {
   position: relative;
   top: 4px;
 }
-.strip .subscribe-email-field:focus {
+.strip .signup-email-field:focus {
   outline: none;
 }
 .strip .subscribe-email-field {
@@ -1635,7 +1635,7 @@ img.phone-portrait {
   position: relative;
   top: 4px;
 }
-.strip .signup-email-field:focus {
+.strip .subscribe-email-field:focus {
   outline: none;
 }
 .pricing-tables .col-md-3:first-child .pricing-table {
@@ -2316,6 +2316,10 @@ input[type="submit"] {
   letter-spacing: 1px;
 }
 .strip .mail-list-signup input[type="submit"] {
+  background: none;
+  border: 2px solid #fff;
+}
+.strip .mail-list-subscribe input[type="submit"] {
   background: none;
   border: 2px solid #fff;
 }
