@@ -647,3 +647,22 @@ function onYouTubeIframeAPIReady() {
     });
     
 }
+
+/*** Configuration Variables ***/
+var config = {
+  disqus_shortname:"appknox",
+  lat:"1.296769",
+  lng:"103.786914",
+  zoom:12
+};
+
+/**
+* JS: DISQUS
+*/
+
+if ($("#disqus_thread").length){
+    (loadDisqus = function(){
+    var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = '//' + config.disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e);
+    })();
+}

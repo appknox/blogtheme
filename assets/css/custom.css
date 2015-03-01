@@ -6,3 +6,6 @@
 .author-img {
   border-radius: 100%;
 }
+#disqus_thread { text-align:center;  }
+
+#disqus_thread .fa { padding: 0 10px 0 0; }

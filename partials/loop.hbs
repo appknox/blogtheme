@@ -33,40 +33,10 @@
             
             <div class="col-sm-3">
               <div class="blog-sidebar">
-                <div class="sidebar-widget">
-                  <h5>Subscribe For Updates</h5>
-                  <form class="mail-list-subscribe">
-                    <div>
-                      <input type="text" class="subscribe-email-field validate-required validate-email" placeholder="Enter your email here">
-                    </div>
-                    
-                    <div>
-                      <input type="submit" class="btn btn-primary btn-filled" value="Subscribe">
-                    </div>
-                  </form>
-                </div>
-
-                <div class="sidebar-widget">
-                  <h5>Recent Posts</h5>
-                  <ul id="posts_list">
-                  </ul>
-                </div>
-
-                <div class="sidebar-widget">
-                  <h5>Twitter</h5>
-                  <a class="twitter-follow-button" href="https://twitter.com/appknox" data-show-count="true" data-lang="en">
-                    Follow @appknox
-                  </a>
-                  <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
-
-                  <div id="tweets" data-widget-id="570018399682457600">
-                </div>
-
-                <div class="sidebar-widget">
-                  <h5>Find us in Facebook</h5>
-                  <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fappknox&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=204304539680791" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
-                </div>
-                
+                {{> sidebar/subscribe }}
+                {{> sidebar/recent }}
+                {{> sidebar/twitter }}
+                {{> sidebar/facebook }}
               </div>
             </div>
           </div><!--end of row-->

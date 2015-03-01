@@ -38,31 +38,24 @@
           {{#if website}}<p><i class="icon icon_link_alt"></i><a href="{{website}}">{{website}}</a></p>{{/if}}
         </div>
         {{/author}}
+        {{> widgets/disqus }}
       </div>
       
       <div class="col-sm-3 col-md-offset-1">
         <div class="blog-sidebar">
-          <div class="sidebar-widget">
-            <h5>Recent Posts</h5>
-            <ul id="posts_list">
-              <li><a href="{{url}}">{{title}} <i class="icon arrow_right"></i></a></li>
-            </ul>
-          </div>
+          {{> sidebar/subscribe }}
+          {{> sidebar/recent }}
           {{#if tags}}
-          <div class="sidebar-widget">
-            <h5>Tags</h5>
-            <ul class="tags">
-              {{#foreach tags}}
-              <li><a href="{{url}}">{{name}}</a></li>
-              {{/foreach}}
-            </ul>
-          </div>
+            {{> sidebar/tags }}
           {{/if}}
+          {{> sidebar/twitter }}
+          {{> sidebar/facebook }}
         </div>
       </div>
       
     </div>
     
-  </div>  
+  </div>
+
 </section>
 {{/post}}
