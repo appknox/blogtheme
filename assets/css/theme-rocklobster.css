@@ -113,7 +113,7 @@ ul {
   padding: 0px;
 }
 .article-body ul {
-  list-style: circle;
+  list-style: disc;
 }
 a:hover {
   text-decoration: none;
