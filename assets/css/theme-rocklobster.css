@@ -112,7 +112,7 @@ ul {
   list-style: none;
   padding: 0px;
 }
-.article-body.ul {
+.article-body ul {
   list-style: circle;
 }
 a:hover {
