@@ -1,0 +1,10 @@
+{{#if @blog.navigation}}
+<div class="sidebar-widget">
+  <h5>Categories</h5>
+  <ul class="tags">
+    {{#foreach @blog.navigation}}
+    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+</div>
+{{/if}}
