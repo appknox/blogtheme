@@ -1,8 +1,8 @@
-{{#if @blog.navigation}}
+{{#if navigation}}
 <div class="sidebar-widget">
   <h5>Categories</h5>
   <ul id="tags">
-    {{#foreach @blog.navigation}}
+    {{#foreach navigation}}
     <li><a href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
   </ul>
