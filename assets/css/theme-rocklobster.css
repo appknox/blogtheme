@@ -493,7 +493,7 @@ nav hr {
 }
 .menu li {
   float: left;
-  margin-right: 56px;
+  margin-right: 46px;
   position: relative;
 }
 .menu li:last-child {
@@ -502,7 +502,7 @@ nav hr {
 .menu li a {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #777777;
