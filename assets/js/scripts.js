@@ -666,3 +666,10 @@ if ($("#disqus_thread").length){
     (document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e);
     })();
 }
+
+var links = document.querySelectorAll( '.post-content a' );  
+for (var i = 0, length = links.length; i < length; i++) {  
+  if (links[i].hostname != window.location.hostname) {
+    links[i].target = '_blank';
+  } 
+}
